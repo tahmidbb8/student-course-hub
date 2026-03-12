@@ -9,4 +9,10 @@ if (!isset($_SESSION["admin"])) {
 ?>
 
 <h1>Admin Dashboard</h1>
-<p>Login successful.</p>
+
+<ul>
+    <li><a href="manage_programmes.php">Manage Programmes</a></li>
+    <li><a href="manage_modules.php">Manage Modules</a></li>
+    <li><a href="interested_students.php">View Interested Students</a></li>
+    <li><a href="export_mailing_list.php">Export Mailing List</a></li>
+</ul>
