@@ -57,6 +57,7 @@ $sql = "INSERT INTO programmes (ProgrammeName, LevelID, ProgrammeLeaderID)
 <th>Leader</th>
 <th>Description</th>
 <th>Image</th>
+<th>Actions</th>
 </tr>
 
 <?php
