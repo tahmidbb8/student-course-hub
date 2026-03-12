@@ -49,26 +49,34 @@ $sql = "INSERT INTO programmes (ProgrammeName, LevelID, ProgrammeLeaderID)
 <h2>All Programmes</h2>
 
 <table border="1" cellpadding="10">
-    <tr>
-        <th>Programme ID</th>
-        <th>Programme Name</th>
-        <th>Level ID</th>
-        <th>Leader ID</th>
-    </tr>
 
-    <?php
-    $sql = "SELECT * FROM programmes";
-    $result = mysqli_query($conn, $sql);
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Level</th>
+<th>Leader</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        echo "<td>" . $row["ProgrammeID"] . "</td>";
-        echo "<td>" . $row["ProgrammeName"] . "</td>";
-        echo "<td>" . $row["LevelID"] . "</td>";
-        echo "<td>" . $row["ProgrammeLeaderID"] . "</td>";
-        echo "</tr>";
-    }
-    ?>
+<?php
+$sql = "SELECT * FROM programmes";
+$result = mysqli_query($conn, $sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+
+echo "<tr>";
+echo "<td>".$row["ProgrammeID"]."</td>";
+echo "<td>".$row["ProgrammeName"]."</td>";
+echo "<td>".$row["LevelID"]."</td>";
+echo "<td>".$row["ProgrammeLeaderID"]."</td>";
+echo "<td>".$row["Description"]."</td>";
+echo "<td>".$row["Image"]."</td>";
+echo "</tr>";
+
+}
+?>
+
 </table>
 
 <br>
