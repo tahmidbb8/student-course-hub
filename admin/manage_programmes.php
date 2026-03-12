@@ -1,10 +1,27 @@
 <?php
 session_start();
 
+include "../db.php";
+
 // if admin session does not exist, send user back to login page
 if (!isset($_SESSION["admin"])) {
     header("Location: login.php");
     exit();
+}
+
+// check if form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+   $programme_name = $_POST["programme_name"];
+$level_id = $_POST["level"];
+$leader_id = $_POST["leader"];
+
+$sql = "INSERT INTO programmes (ProgrammeName, LevelID, ProgrammeLeaderID)
+        VALUES ('$programme_name', '$level_id', '$leader_id')";
+
+    mysqli_query($conn, $sql);
+
+    echo "Programme added successfully!";
 }
 ?>
 
