@@ -46,4 +46,31 @@ $sql = "INSERT INTO programmes (ProgrammeName, LevelID, ProgrammeLeaderID)
 
 <hr>
 
+<h2>All Programmes</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Programme ID</th>
+        <th>Programme Name</th>
+        <th>Level ID</th>
+        <th>Leader ID</th>
+    </tr>
+
+    <?php
+    $sql = "SELECT * FROM programmes";
+    $result = mysqli_query($conn, $sql);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>" . $row["ProgrammeID"] . "</td>";
+        echo "<td>" . $row["ProgrammeName"] . "</td>";
+        echo "<td>" . $row["LevelID"] . "</td>";
+        echo "<td>" . $row["ProgrammeLeaderID"] . "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
+
+<br>
+
 <p><a href="dashboard.php">Back to Dashboard</a></p>
