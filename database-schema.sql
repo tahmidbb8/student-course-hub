@@ -57,6 +57,7 @@ CREATE TABLE InterestedStudents (
     ProgrammeID INT NOT NULL,
     StudentName VARCHAR(100) NOT NULL,
     Email VARCHAR(255) NOT NULL,
+    is_active BOOLEAN DEFAULT 1,
     RegisteredAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE (Email, ProgrammeID),
     FOREIGN KEY (ProgrammeID) REFERENCES Programmes(ProgrammeID) ON DELETE CASCADE
