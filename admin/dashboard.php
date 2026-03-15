@@ -15,4 +15,5 @@ if (!isset($_SESSION["admin"])) {
     <li><a href="manage_modules.php">Manage Modules</a></li>
     <li><a href="interested_students.php">View Interested Students</a></li>
     <li><a href="export_mailing_list.php">Export Mailing List</a></li>
-</ul>
+    </ul><a href="interested_students.php">View Interested Students</a><br><br>
+    <a href="export_mailing_list.php">Export Mailing List</a><br><br>
