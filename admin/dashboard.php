@@ -26,8 +26,8 @@ if (!isset($_SESSION["admin"])) {
     <li><a href="manage_programmes.php">Manage Programmes</a></li>
     <li><a href="manage_modules.php">Manage Modules</a></li>
     <li><a href="interested_students.php">View Interested Students</a></li>
-    <li><a href="export.php">Export Mailing List</a></li>
-    <li><a href="logout.php" class="logout">Logout</a></li>
+    <li><a href="export_mailing_list.php">Export Mailing List</a></li>
+    <li><a href="confirm_logout.php" class="logout">Logout</a></li>
 </ul>
 
 </body>

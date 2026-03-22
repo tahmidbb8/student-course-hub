@@ -3,6 +3,11 @@ session_start();
 include "../db.php";
 
 $error = "";
+$success = "";
+
+if (isset($_GET["logged_out"])) {
+    $success = "Logout successful.";
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"] ?? "");
@@ -35,9 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 <h1>Admin Login</h1>
+
+<?php if (!empty($success)) { ?>
+    <p style="color:green;"><?php echo $success; ?></p>
+<?php } ?>
 
 <?php if (!empty($error)) { ?>
     <p style="color:red;"><?php echo $error; ?></p>

@@ -3,44 +3,87 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
-}
-
-/* ===== MAIN CONTAINER ===== */
-.container {
-    width: 90%;
-    margin: 20px auto;
+    color: #333;
 }
 
 /* ===== HEADINGS ===== */
 h1, h2 {
     color: #333;
+    margin-top: 0;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 60px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* ===== BUTTONS ===== */
-button, a.btn {
-    padding: 6px 12px;
+button,
+a.btn,
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
     background: #007BFF;
     color: white;
     border: none;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-button:hover, a.btn:hover {
+button:hover,
+a.btn:hover,
+.btn:hover {
     background: #0056b3;
 }
 
 /* ===== FORMS ===== */
 form {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 350px;
+    margin: 20px auto;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
-    padding: 6px;
-    margin: 6px 0;
+    padding: 10px;
+    margin: 8px 0 14px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"],
+form button {
+    width: auto;
+    min-width: 100px;
+    padding: 10px 18px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+form button:hover {
+    background: #0056b3;
 }
 
 /* ===== TABLE ===== */
@@ -50,9 +93,11 @@ table {
     background: white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 8px;
+    text-align: left;
 }
 
 th {
@@ -63,13 +108,15 @@ th {
 /* ===== STATUS ===== */
 .status-published {
     color: green;
+    font-weight: bold;
 }
 
 .status-hidden {
     color: red;
+    font-weight: bold;
 }
 
-/* Dashboard only styling */
+/* ===== DASHBOARD ===== */
 .dashboard-menu {
     list-style: none;
     padding: 0;
@@ -100,4 +147,66 @@ th {
 
 .dashboard-menu .logout:hover {
     background: #a71d2a;
+}
+
+/* ===== CONFIRM LOGOUT PAGE ===== */
+.confirm-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.logout-btn {
+    background: #dc3545;
+}
+
+.logout-btn:hover {
+    background: #a71d2a;
+}
+
+.cancel-btn {
+    background: #6c757d;
+}
+
+.cancel-btn:hover {
+    background: #545b62;
+}
+
+/* ===== MESSAGES ===== */
+.success-msg {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ===== LOGIN PAGE TOUCH-UP ===== */
+body > h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+body > .success-msg,
+body > .error-msg,
+body > p {
+    text-align: center;
+}
+
+body > form {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
