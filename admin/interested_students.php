@@ -14,11 +14,13 @@ $sql = "SELECT InterestedStudents.StudentName, InterestedStudents.Email, Program
 $result = mysqli_query($conn, $sql);
 ?>
 
+<link rel="stylesheet" href="style.css">
+
 <h1>Interested Students</h1>
 
 <?php
-if (mysqli_num_rows($result) > 0) {
-    echo "<table border='1' cellpadding='10'>";
+if ($result && mysqli_num_rows($result) > 0) {
+    echo "<table>";
     echo "<tr>";
     echo "<th>Student Name</th>";
     echo "<th>Email</th>";
