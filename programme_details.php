@@ -1,6 +1,23 @@
 <?php
 include "db.php";
 
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $StudentName = $_POST["StudentName"];
+    $Email = $_POST["Email"];
+    $ProgrammeID = $_GET["id"];
+
+    $sqlInsert = "INSERT INTO InterestedStudents (ProgrammeID, StudentName, Email)
+                  VALUES ('$ProgrammeID', '$StudentName', '$Email')";
+
+    if (mysqli_query($conn, $sqlInsert)) {
+        $message = "<p class='success-msg'>Interest registered successfully!</p>";
+    } else {
+        $message = "<p class='error-msg'>Error registering interest.</p>";
+    }
+}
+
 if (!isset($_GET["id"])) {
     echo "No programme selected.";
     exit();
@@ -63,6 +80,16 @@ if ($programme) {
     echo "<p>Programme not found.</p>";
 }
 ?>
+
+<h2>Register Interest</h2>
+
+<?php echo $message; ?>
+
+<form method="POST">
+    <input type="text" name="StudentName" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <button type="submit" class="btn">Register</button>
+</form>
 
 <br>
 <a href="index.php" class="btn">Back</a>
