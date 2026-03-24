@@ -20,16 +20,16 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interested Students</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin-style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="interested-students-box">
     <h1>Interested Students</h1>
 
     <?php
     if ($result && mysqli_num_rows($result) > 0) {
-        echo "<table>";
+        echo "<table class='students-table'>";
         echo "<tr>";
         echo "<th>Student Name</th>";
         echo "<th>Email</th>";
@@ -43,19 +43,18 @@ $result = mysqli_query($conn, $sql);
             echo "<td>" . $row["Email"] . "</td>";
             echo "<td>" . $row["ProgrammeName"] . "</td>";
             echo "<td>
-                    <a href='delete_interest.php?id=" . $row["InterestID"] . "' onclick=\"return confirm('Are you sure you want to delete this registration?');\">Delete</a>
+                    <a class='delete-btn' href='delete_interest.php?id=" . $row["InterestID"] . "' onclick=\"return confirm('Are you sure you want to delete this registration?');\">Delete</a>
                   </td>";
             echo "</tr>";
         }
 
         echo "</table>";
     } else {
-        echo "<p>No students have registered interest yet.</p>";
+        echo "<p class='no-data'>No students have registered interest yet.</p>";
     }
     ?>
 
-    <br>
-    <a href="dashboard.php">Back to Dashboard</a>
+    <a href="dashboard.php" class="back-btn">Back to Dashboard</a>
 </div>
 
 </body>
