@@ -16,7 +16,6 @@ if (!isset($_GET["id"])) {
 $id = $_GET["id"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $programme_name = $_POST["programme_name"];
     $level = $_POST["level"];
     $leader = $_POST["leader"];
@@ -36,21 +35,56 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 ?>
 
-<h1>Edit Programme</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Programme</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
 
-<form method="POST">
+<div class="form-page">
+    <div class="form-box">
+        <h1>Edit Programme</h1>
 
-<label>Programme Name:</label>
-<input type="text" name="programme_name" value="<?php echo $row['ProgrammeName']; ?>"><br><br>
+        <form method="POST">
+            <label for="programme_name">Programme Name:</label>
+            <input 
+                type="text" 
+                id="programme_name" 
+                name="programme_name" 
+                value="<?php echo $row['ProgrammeName']; ?>" 
+                required
+            >
 
-<label>Level ID:</label>
-<input type="text" name="level" value="<?php echo $row['LevelID']; ?>"><br><br>
+            <label for="level">Level ID:</label>
+            <input 
+                type="text" 
+                id="level" 
+                name="level" 
+                value="<?php echo $row['LevelID']; ?>" 
+                required
+            >
 
-<label>Programme Leader ID:</label>
-<input type="text" name="leader" value="<?php echo $row['ProgrammeLeaderID']; ?>"><br><br>
+            <label for="leader">Programme Leader ID:</label>
+            <input 
+                type="text" 
+                id="leader" 
+                name="leader" 
+                value="<?php echo $row['ProgrammeLeaderID']; ?>" 
+                required
+            >
 
-<button type="submit">Update Programme</button>
+            <button type="submit" class="btn update-btn">Update Programme</button>
+        </form>
 
-</form>
+        <p class="back-link">
+            <a href="manage_programmes.php">Back to Manage Programmes</a>
+        </p>
+    </div>
+</div>
 
-<p><a href="manage_programmes.php">Back to Manage Programmes</a></p>
+</body>
+</html>

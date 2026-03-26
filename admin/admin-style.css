@@ -1,0 +1,454 @@
+/* ===== GENERAL PAGE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
+
+/* ===== MAIN CONTAINERS ===== */
+.container,
+.logout-box,
+.export-box,
+body > form {
+    background-color: white;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.logout-box,
+.export-box,
+body > form {
+    max-width: 450px;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    text-align: center;
+    color: #1f3c88;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2c5282;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dbe4ff;
+    padding-bottom: 8px;
+}
+
+/* ===== LOGIN PAGE TEXT ===== */
+body > h1 {
+    max-width: 450px;
+    margin: 50px auto 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+}
+
+body > p {
+    max-width: 450px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ===== FORMS ===== */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a6fdc;
+    background-color: white;
+}
+
+/* ===== BUTTONS ===== */
+button,
+.export-btn,
+.back-btn,
+.back-link,
+.dashboard-menu a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Main blue buttons */
+button,
+.export-btn,
+.back-link,
+.dashboard-menu a {
+    background-color: #1f3c88;
+    color: white;
+}
+
+button:hover,
+.export-btn:hover,
+.back-link:hover,
+.dashboard-menu a:hover {
+    background-color: #2f57c0;
+}
+
+/* Grey buttons */
+.back-btn {
+    background-color: #e5e7eb;
+    color: #222;
+}
+
+.back-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* Red buttons */
+.delete-btn,
+.logout {
+    background-color: #d62828;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-btn:hover,
+.logout:hover {
+    background-color: #b71c1c;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-menu li {
+    margin-bottom: 12px;
+}
+
+.dashboard-menu a {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ===== TABLES ===== */
+table,
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #d9e1ec;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #1f3c88;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8faff;
+}
+
+tr:hover {
+    background-color: #eef3ff;
+}
+
+/* ===== NORMAL LINKS ===== */
+a {
+    color: #1f3c88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== STATUS LABELS ===== */
+.status-published {
+    color: green;
+    font-weight: bold;
+}
+
+.status-hidden {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== MESSAGES ===== */
+.success-msg {
+    background-color: #dff6e4;
+    color: #1b5e20;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.error-msg {
+    background-color: #fde2e2;
+    color: #b71c1c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.no-data,
+.export-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* ===== SPECIAL SPACING ===== */
+.back-link {
+    margin-top: 20px;
+}
+
+.logout-box form {
+    text-align: center;
+}
+
+.logout-box button {
+    margin: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container,
+    .logout-box,
+    .export-box,
+    body > form,
+    body > h1 {
+        padding: 20px;
+    }
+
+    table,
+    .students-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* =========================================
+   GENERAL ADMIN PAGE STYLING
+   Used by both edit_programme.php and confirm_logout.php
+========================================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   EDIT PROGRAMME PAGE STYLING
+   This styles the full page area for edit_programme.php
+========================================= */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* This styles the white box in edit_programme.php */
+.form-box {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* This styles the heading in edit_programme.php */
+.form-box h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1f3c88;
+}
+
+/* This styles labels in edit_programme.php */
+.form-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* This styles input fields in edit_programme.php */
+.form-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* This styles the update button in edit_programme.php */
+.update-btn {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.update-btn:hover {
+    background-color: #162d66;
+}
+
+/* This styles the back link in edit_programme.php */
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #050c1f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   CONFIRM LOGOUT PAGE STYLING
+   This styles confirm_logout.php
+========================================= */
+.confirm-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* This styles the white confirmation box in confirm_logout.php */
+.confirm-box {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* This styles the heading in confirm_logout.php */
+.confirm-box h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1f3c88;
+}
+
+/* This styles the question text in confirm_logout.php */
+.confirm-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* This styles the button area in confirm_logout.php */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* General button style used in confirm_logout.php */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* This styles the logout button in confirm_logout.php */
+.logout-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #992d22;
+}
+
+/* This styles the cancel button in confirm_logout.php */
+.cancel-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5f6b6d;
+}
