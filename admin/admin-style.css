@@ -284,3 +284,171 @@ a:hover {
         white-space: nowrap;
     }
 }
+
+/* =========================================
+   GENERAL ADMIN PAGE STYLING
+   Used by both edit_programme.php and confirm_logout.php
+========================================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   EDIT PROGRAMME PAGE STYLING
+   This styles the full page area for edit_programme.php
+========================================= */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* This styles the white box in edit_programme.php */
+.form-box {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* This styles the heading in edit_programme.php */
+.form-box h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1f3c88;
+}
+
+/* This styles labels in edit_programme.php */
+.form-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* This styles input fields in edit_programme.php */
+.form-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* This styles the update button in edit_programme.php */
+.update-btn {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.update-btn:hover {
+    background-color: #162d66;
+}
+
+/* This styles the back link in edit_programme.php */
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #050c1f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   CONFIRM LOGOUT PAGE STYLING
+   This styles confirm_logout.php
+========================================= */
+.confirm-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* This styles the white confirmation box in confirm_logout.php */
+.confirm-box {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* This styles the heading in confirm_logout.php */
+.confirm-box h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1f3c88;
+}
+
+/* This styles the question text in confirm_logout.php */
+.confirm-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* This styles the button area in confirm_logout.php */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* General button style used in confirm_logout.php */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* This styles the logout button in confirm_logout.php */
+.logout-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #992d22;
+}
+
+/* This styles the cancel button in confirm_logout.php */
+.cancel-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5f6b6d;
+}
