@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
 
-            if ($password == $row["PasswordHash"]) {
+           if (password_verify($password, $row["PasswordHash"])) {
                 $_SESSION["admin"] = $row["Username"];
                 $_SESSION["admin_id"] = $row["AdminID"];
 
